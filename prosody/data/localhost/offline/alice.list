@@ -1,0 +1,20 @@
+item({
+	[1] = {
+		["name"] = "active";
+		["attr"] = {
+			["xmlns"] = "http://jabber.org/protocol/chatstates";
+		};
+	};
+	["attr"] = {
+		["stamp_legacy"] = "20180808T20:01:29";
+		["type"] = "chat";
+		["to"] = "alice@localhost";
+		["from"] = "bob@localhost/fe6ac28e-e48a-4d28-a7c6-ab8004ba72c6";
+		["id"] = "purpled798a2b3";
+		["stamp"] = "2018-08-08T20:01:29Z";
+	};
+	["key"] = "B_qg53nXIdF7X1v1";
+	["when"] = 1533758489;
+	["with"] = "";
+	["name"] = "message";
+});
