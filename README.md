@@ -1,17 +1,19 @@
-# Running a prekey server on Docker
+# Prosody server with a OTRv4 prekey server included
 
-This is to give some inspiration on what needs to be put together.
+A docker composed infrastructure containing a prosody xmpp server and a OTRv4 prekey server added to it. It also has some dummy accounts.
+
+NOTE: This server is intended to be used only for local testing.
+
+## Running the xmpp server on Docker
 
 ```
 git clone this
-cp .env-sample .env
-edit .env
 docker-compose up
 ```
 
-On my setup, I have a XMPP server that listen for connections on
-`/run/prosody-components.so`. I have to use a socat container to expose this
-inside the docker network bc the XMPP prekey server does not handle unix
-sockets.
-
-If you run everything on docker, you shoudl not have that problem.
+## Accounts
+```
+user                password
+alice@localhost     alice
+bob@localhost       bob
+```
