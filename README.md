@@ -7,7 +7,6 @@ NOTE: This server is intended to be used only for local testing.
 ## Running the xmpp server on Docker
 
 ```
-git clone this
 docker-compose up
 ```
 
