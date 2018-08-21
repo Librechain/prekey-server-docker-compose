@@ -6,8 +6,32 @@ NOTE: This server is intended to be used only for local testing.
 
 ## Running the xmpp server on Docker
 
+1. Create an `.env` file with:
+
 ```
-docker-compose up
+  PREKEY_SERVER_IDENTITY=prekeys.localhost
+  PREKEY_SERVER_FINGERPRINT=
+  XMPP_COMPONENTS_SECRET=this is secret
+```
+
+2. Run:
+
+```
+  docker-compose up
+```
+
+3. Copy the shown fingerprint into the `.env` file.
+
+4. Run:
+
+```
+  docker-compose up
+```
+
+In order to make this server be recognizable by the pidgin plugin, you need to:
+
+```
+  CFLAGS="-ggdb3 -O0 -DDEFAULT_PREKEYS_SERVER='\"prekeys.localhost\"'" ./configure
 ```
 
 ## Accounts
