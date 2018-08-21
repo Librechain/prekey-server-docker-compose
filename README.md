@@ -31,7 +31,7 @@ NOTE: This server is intended to be used only for local testing.
 In order to make this server be recognizable by the pidgin plugin, you need to:
 
 ```
-  CFLAGS="-ggdb3 -O0 -DDEFAULT_PREKEYS_SERVER='\"prekeys.localhost\"'" ./configure
+  ./configure CFLAGS="-ggdb3 -O0 -DDEFAULT_PREKEYS_SERVER='\"prekeys.localhost\"'"
 ```
 
 ## Accounts
