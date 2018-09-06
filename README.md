@@ -20,7 +20,7 @@ NOTE: This server is intended to be used only for local testing.
   docker-compose up
 ```
 
-3. Copy the shown fingerprint into the `.env` file.
+3. Copy the shown fingerprint (without spaces/brackets) into the `.env` file.
 
 4. Run:
 
