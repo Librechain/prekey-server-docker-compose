@@ -25,6 +25,27 @@ NOTE: This server is intended to be used only for local testing.
 4. Run:
 
 ```
+docker-compose up
+```
+
+In another window do:
+
+```
+docker-compose exec xmpp-server bash
+ls -al ~/localhost/
+```
+
+We take the id/gid of the offline folder chown it outside of the docker container so the offline storage is writable.
+
+```
+
+```
+sudo chown -R uid:gid prekey-server-docker-compose/prosody/data/localhost/
+```
+
+5. Run:
+
+```
   docker-compose up
 ```
 
