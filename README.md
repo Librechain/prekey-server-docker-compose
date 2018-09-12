@@ -37,7 +37,6 @@ ls -al ~/localhost/
 
 We take the id/gid of the offline folder chown it outside of the docker container so the offline storage is writable.
 
-```
 
 ```
 sudo chown -R uid:gid prekey-server-docker-compose/prosody/data/localhost/
