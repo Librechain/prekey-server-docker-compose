@@ -64,6 +64,16 @@ ls -al ~/localhost/
 
 2. Take the id/gid of the offline folder chown it outside of the docker container so the offline storage is writable.
 
+
+3. In some distributions could be neccesary execute the following steps:
+   - Modify prekey-server-docker-compose/prosody/Dockerfile adding:
+     RUN chown root:prosody /etc/prosody/certs/localhost.key
+     RUN chmod 660 /etc/prosody/certs/localhost.key
+
+   - Rebuild the image
+     sudo docker-compose build
+      
+
 ```
 sudo chown -R uid:gid prekey-server-docker-compose/prosody/data/localhost/
 ```
