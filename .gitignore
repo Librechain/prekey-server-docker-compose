@@ -2,3 +2,5 @@
 keys/*
 secrets/*
 *.log
+prosody/data/.bash_history
+prosody/data/localhost/offline/alice.list
