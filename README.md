@@ -62,23 +62,28 @@ docker-compose exec xmpp-server bash
 ls -al ~/localhost/
 ```
 
-2. Take the id/gid of the offline folder chown it outside of the docker container so the offline storage is writable (The user which executes the docker-compose up command, must belong to do docker group).
+2. Take the `id/gid` (the 4th column) of the offline folder. Chown it outside of
+the docker container so the offline storage is writable. Note that the user
+must belong to the docker group.
 
 ```
 sudo chown -R uid:gid prekey-server-docker-compose/prosody/data/localhost/
 ```
 
-3. In some distributions could be neccesary execute the following steps:
+3. In some distributions could be necessary to execute the following steps:
+
 - Modify prekey-server-docker-compose/prosody/Dockerfile adding:
-```   
+
+```
      RUN chown root:prosody /etc/prosody/certs/localhost.key
      RUN chmod 660 /etc/prosody/certs/localhost.key
 ```
+
 - Rebuild the image
+
 ```
      sudo docker-compose build
-```      
-
+```
 
 -------------------------------------------------------------------------------
 
