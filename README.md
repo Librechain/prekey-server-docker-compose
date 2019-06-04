@@ -93,6 +93,16 @@ In order to make this server be recognizable by the pidgin plugin, you need to:
   ./configure CFLAGS="-ggdb3 -O0 -DDEFAULT_PREKEYS_SERVER='\"prekeys.localhost\"'"
 ```
 
+## Restart the prosody server
+
+Run:
+
+```
+docker-compose down
+docker-compose stop
+docker system prune -a
+```
+
 ## Accounts available
 
 ```
