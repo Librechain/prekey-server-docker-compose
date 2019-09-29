@@ -1,5 +1,6 @@
 FROM golang:latest
 
+RUN go version
 RUN go get -d -v github.com/otrv4/otrng-prekey-server/server/raw
 RUN go install -v github.com/otrv4/otrng-prekey-server/server/raw
 RUN go env GOPATH
